@@ -13,7 +13,7 @@ The major modification is to make the ```--keep``` argument work with whoever in
 for ind in all_inds:
             if ind in keep:
                 ind_order.append(ind)
-                ```  
+```    
 from keep adding ind in to the loop as the script thinks ```ind_order = all_inds```. Then, the loops at line 84-94 and line 122-131 were modified to make the ```--keep``` argument also work for admixed targets.  
 One minor modification is to change line 111 ```fbk_chunked = chunker(fbk_line, 3)``` to ```fbk_chunked = chunker(fbk_line, 2)```, as I only used two reference sources.  
 
