@@ -1,4 +1,4 @@
-__author__ = 'armartin'
+__author__ = 'armartin (modified by dangliu)' #by dangliu
 import argparse
 
 USAGE = """
@@ -21,12 +21,12 @@ bed_list = open(args.bed_list)
 ind_list = open(args.ind_list)
 out = open(args.out, 'w')
 pops = args.pops
-pops_s = pops.split(",") # make output more simple (not splitted by letters)
-#print pops_s
+pops_s = pops.split(",") # make output more simple (not splitted by letters) #by dangliu
+#print pops_s #by dangliu
 #out.write('ID\t' + '\t'.join(pops) + '\n')
 #lai_props = [0]*len(pops)
-out.write('ID\t' + '\t'.join(pops_s) + '\n')
-lai_props = [0]*len(pops_s)
+out.write('ID\t' + '\t'.join(pops_s) + '\n') #by dangliu
+lai_props = [0]*len(pops_s) #by dangliu
 #print lai_props 
 for line in bed_list:
     line = line.strip().split()
@@ -37,17 +37,19 @@ for line in bed_list:
       tract = tract.strip().split()
       #if tract[3] in pops: #this excludes stuff not listed in pops
         #lai_props[pops.index(tract[3])] += (float(tract[5]) - float(tract[4]))
-      if tract[3] in pops_s: #this excludes stuff not listed in pops
-        lai_props[pops_s.index(tract[3])] += (float(tract[5]) - float(tract[4]))
+      if tract[3] in pops_s: #this excludes stuff not listed in pops #by dangliu
+        lai_props[pops_s.index(tract[3])] += (float(tract[5]) - float(tract[4])) #by dangliu
     for tract in bed_b:
       tract = tract.strip().split()
       #if tract[3] in pops: #this excludes stuff not listed in pops
       #  lai_props[pops.index(tract[3])] += (float(tract[5]) - float(tract[4]))
-      if tract[3] in pops_s: #this excludes stuff not listed in pops
-        lai_props[pops_s.index(tract[3])] += (float(tract[5]) - float(tract[4]))
+      if tract[3] in pops_s: #this excludes stuff not listed in pops #by dangliu
+        lai_props[pops_s.index(tract[3])] += (float(tract[5]) - float(tract[4])) #by dangliu
     
     out.write(ind + '\t' + '\t'.join(map(str, [round(i/sum(lai_props), 4) for i in lai_props])) + '\n')
     #lai_props = [0]*len(pops)
-    lai_props = [0]*len(pops_s)
+    lai_props = [0]*len(pops_s) #by dangliu
         
 out.close()
+
+#last_v20211209 #by dangliu

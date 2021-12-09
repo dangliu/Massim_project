@@ -3,7 +3,7 @@ sets up RFMix (alleles, snp_locations, and classes) files from shapeit output
 to do: test that triallelics and strand flips are dealt with properly
 admixed_keep can be None if keeping all individuals
 """
-__author__ = 'armartin'
+__author__ = 'armartin (modified by dangliu)' #by dangliu
 
 import argparse
 from datetime import datetime
@@ -43,7 +43,7 @@ def find_indices(keep_set, shapeit_sample, out_sample):
     header0 = shapeit_sample.readline().strip().split()
     header1 = shapeit_sample.readline()
     #if header0 != ['ID_1', 'ID_2', 'missing', 'father', 'mother', 'sex', 'plink_pheno']: # modify this for my shapeit outputs
-    if header0 != ['ID_1', 'ID_2', 'missing']: # modify this for my shapeit outputs
+    if header0 != ['ID_1', 'ID_2', 'missing']: # modify this for my shapeit outputs #by dangliu
         raise RuntimeError('Shapeit sample file appears to be incorrect')
     indices = []
     ind_order = []
@@ -264,3 +264,4 @@ if __name__ == '__main__':
     main(args)
     
 
+#lasy_v20211209 #by dangliu
