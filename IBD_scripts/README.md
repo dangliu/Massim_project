@@ -8,6 +8,7 @@ This directory contains R scripts for analyzing between-group IBD sharing among 
 * ggrepel
 * reshape2
 * geosphere  
+  
 Can run this command in R to install all the packages: ```install.packages(c("tidyverse", "ggmap", "maps", "ggrepel", "reshape2", "geosphere"))```  
 ***
 The IBD result file is **all.lPSC.Merged** which contains inferred and merged IBD between all the individuals in our dataset by [refinedIBD](https://faculty.washington.edu/browning/refined-ibd.html) and their merge-ibd-segments.jar java script. The .ibd and .hbd output files were merged all together as long Pairwise Shared Coalescent (lPSC) according to [previous study](https://github.com/halasadi/MAPS).  
