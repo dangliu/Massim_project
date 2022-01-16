@@ -3,7 +3,7 @@
 
 # author: "Dang Liu 25.Nov.2019"
 
-# Last updated: 13.Dec.2021
+# Last updated: 16.Jan.2022
 
 # Use libraries
 library(tidyverse)
@@ -144,7 +144,7 @@ IBD$Avg.sum.IBD.L <- ifelse(IBD$Avg.sum.IBD.L >= 30, 30, IBD$Avg.sum.IBD.L)
 # Colored by Area
 Area = c("PNG_Highland"="#A6CEE3","PNG_Lowland"="#1F78B4","Bismarck_Arch"="#B2DF8A", 
          "Massim"="#33A02C","Solomon_Arch"="#FB9A99","Australia"="#E31A1C","Non_Oceania"="#FDBF6F")
-Region = c("Collingwood_Bay"="#8DD3C7","Western_Massim"="#BEBADA","Northern_Massim"="#FB8072","Southern_Massim"="#80B1D3")
+Region = c("Collingwood_Bay"="#8DD3C7","Western_Massim"="#BEBADA","Northern_Massim"="#2e2967","Southern_Massim"="#b87a41")
 # Get the map
 map.world <- map_data(map="world")
 
@@ -216,7 +216,7 @@ d[d$Pop2%in%N_Mas,]$Region2 <- "Northern_Massim"
 d[d$Pop2%in%S_Mas,]$Region2 <- "Southern_Massim"
 
 
-Region_col = c("Collingwood_Bay"="#8DD3C7","Western_Massim"="#BEBADA","Northern_Massim"="#FB8072","Southern_Massim"="#80B1D3","Others"="#FFFFFF")
+Region_col = c("Collingwood_Bay"="#8DD3C7","Western_Massim"="#BEBADA","Northern_Massim"="#2e2967","Southern_Massim"="#b87a41","Others"="#FFFFFF")
 Area_col = c("PNG_Highland"="#A6CEE3","PNG_Lowland"="#1F78B4","Bismarck_Arch"="#B2DF8A", 
          "Massim"="#33A02C","Solomon_Arch"="#FB9A99","Australia"="#E31A1C","Non_Oceania"="#FDBF6F")
 
