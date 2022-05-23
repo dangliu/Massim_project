@@ -10,3 +10,6 @@ I added ```pops_s = pops.split(",")``` to specifically spearate the input refere
 *  **make_aspca_inputs.md.py**  
 The major modification is to make the ```--keep``` argument work with whoever individual I would like to keep, not just limited to reference groups. To do this, line 69 has been rivsed from ```ind_order = all_inds``` to ```ind_order = all_inds[:]``` (which makes ind_order as a copied list of all_inds) to prevent the below loop at line 70-73 from keep adding ind in to the loop as the script thinks ```ind_order = all_inds```. Then, the loops at line 84-94 and line 122-131 were modified to make the ```--keep``` argument also work for admixed targets.  
 One minor modification is to change line 111 ```fbk_chunked = chunker(fbk_line, 3)``` to ```fbk_chunked = chunker(fbk_line, 2)```, as I only used two reference sources.  
+
+## Update  
+I also made one script **RFMix2Mask.py** my own to produce a Eigenstrat format geno file based on the RFMix outputs. The outputs from this script were used to perform ancestry-specific ADMIXTURE and TreeMix.  
