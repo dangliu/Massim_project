@@ -12,4 +12,4 @@ The major modification is to make the ```--keep``` argument work with whoever in
 One minor modification is to change line 111 ```fbk_chunked = chunker(fbk_line, 3)``` to ```fbk_chunked = chunker(fbk_line, 2)```, as I only used two reference sources.  
 
 ## Update  
-I also made one script **RFMix2Mask.py** my own to produce a Eigenstrat format geno file based on the RFMix outputs. The outputs from this script were used to perform ancestry-specific ADMIXTURE and TreeMix.  
+I also made one script **RFMix2Mask.py** my own to produce an Eigenstrat format geno file based on the RFMix outputs. The outputs from this script were used to perform ancestry-specific ADMIXTURE and TreeMix analyses.  
