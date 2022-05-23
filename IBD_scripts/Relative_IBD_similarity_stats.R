@@ -2,7 +2,7 @@
 
 # author: "Dang Liu 30.Aug.2020"
 
-# Last updated: 13.Dec.2021
+# Last updated: 23.May.2022
 
 # Use libraries
 library(tidyverse)
@@ -224,8 +224,8 @@ S_Mas <- c("Misima", "Western_Calvados", "Eastern_Calvados", "Sudest", "Rossel")
 Massim <- c(Collingwood_Bay, W_Mas, N_Mas, S_Mas)
 Outgroup <- c("Africa", "WestEurasia")
 Near_Out <- c("EastAsia", "EastAsia_AN", "Australia")
-PNG_H <- c("S_Papuan", "Southern_Highlands", "Enga", "Western_Highlands", "Chimbu", "Eastern_Highlands", "Gulf", "Madang_Highland")
-PNG_L <- c("Madang_Lowland", "Morobe", "East_Sepik", "Western", "Central")
+PNG_H <- c("S_Papuan", "Southern_Highlands", "Enga", "Western_Highlands", "Chimbu", "Eastern_Highlands", "Madang_Highland")
+PNG_L <- c("Madang_Lowland", "Morobe", "East_Sepik", "Western", "Gulf", "Central")
 Bismarck <- c("Manus_New_Ireland", "West_New_Britain", "East_New_Britain")
 Solomon <- c("Bougainville", "Vella_Lavella", "Malaita", "Santa_Cruz", "Bellona_Rennell", "Tikopia")
 
